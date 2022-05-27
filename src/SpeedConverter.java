@@ -16,7 +16,7 @@
 // If the parameter kilometersPerHour is <0 then print the text "Invalid Value".
 
 // Use the Math.round to round the number of calculated miles per hour (double). The method round returns long.
-// The Math.round() is a built in math method which returns the closest long to the argument. The result is rounded
+// The Math.round() is a built-in math method which returns the closest long to the argument. The result is rounded
 // to an integer by adding 1/2, taking the floor of the result after adding 1/2, and typecasting the result to type
 // long. The method returns the value of the argument rounded to the nearest int value.
 
@@ -26,5 +26,15 @@
 // NOTE: Do not add a main method to the solution code, this will break the web tool for checking solution validity.
 
 public class SpeedConverter {
+    public static long toMilesPerHour(double kilometersPerHour) {
+        if (kilometersPerHour < 0) {
+            return -1;
+        }
 
+        return Math.round(kilometersPerHour / 1.609);
+    }
+
+    public static void printConversion(double kilometersPerHour) {
+
+    }
 }
